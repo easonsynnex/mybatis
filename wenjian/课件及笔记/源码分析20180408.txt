@@ -1,0 +1,33 @@
+1. 作业答疑
+2. 2.0 plugin
+3. mybatis-spring.jar
+	思路：用MyBatis  programming --> managed
+	怎么集成？  xml annotation(java config) spring的集成机制
+    org.mybatis.spring.mapper.ClassPathMapperScanner#isCandidateComponent
+	SqlSession集成方式 
+	为什么mapper的scope可以是application？ 
+		1.mapper的作用是什么？找sql
+	SqlSessionTemplate
+
+SqlSession 
+AuthorMapper.selectByPrimaryKey
+BlogMapper.selectBlogAuthor
+
+
+product
+
+
+被代理的是 Executor
+Plugin
+
+org.apache.ibatis.executor.CachingExecutor@4e268090
+
+
+面试题： 代理能不能再被代理？
+
+
+
+
+
+
+
