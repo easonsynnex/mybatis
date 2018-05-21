@@ -14,14 +14,17 @@ public class GPSession {
         this.executor = executor;
     }
 
-    public <T> T getMapper(Class<T> clazz){
-        return Proxy.newProxyInstance(clazz.getClassLoader(),
+    public <T> T getMapper(Class<T> clazz) throws IllegalArgumentException{
+        return (T) Proxy.newProxyInstance(this.getClass().getClassLoader(),
                 new Class[]{clazz},
-                new MapperPeoxy(this));
+                new MapperProxy(this, clazz));
     }
 
-    public <E> E selectOne() {
-        return executor.query();
+    public <E> E selectOne(String statement, String parameter) {
+        return executor.query(statement, parameter);
     }
 
+    public GPConfiguration getConfiguration() {
+        return configuration;
+    }
 }

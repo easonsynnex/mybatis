@@ -5,10 +5,10 @@ package com.yin;
  */
 public class GPConfiguration {
 
+    private MapperRegistor mapperRegistor = new MapperRegistor();
+
     public MapperRegistor getMapperRegistor() {
         return mapperRegistor;
     }
-
-    private MapperRegistor mapperRegistor = new MapperRegister();
 
 }
